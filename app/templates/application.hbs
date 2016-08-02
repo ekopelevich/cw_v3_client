@@ -1,3 +1,90 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#intro" class="navbar-brand">
+        <div class="logo">
+          <img src="/assets/images/cw-logo-nav.png" alt="CollaboWrite" />
+        </div>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#features">About</a></li>
+        <li><a href="#howitworks">How it Works</a></li>
+        <li><a href="#guidelines">Guidelines</a></li>
+        <li>{{#link-to "stories"}}Browse{{/link-to}}</li>
+        <li>{{#link-to "stories.new"}}New Story{{/link-to}}</li>
+        <li>{{#link-to "dashboard"}}Dashboard{{/link-to}}</li>
+        <li>{{#link-to "login"}}Login/logout{{/link-to}}</li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- Intro Section -->
+<header id="intro" class="intro">
+  <div class="intro-body">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <img src="/assets/images/cw-logo.png" alt="CollaboWrite" />
+        <h1>Tell Stories Together</h1>
+        {{#link-to "stories"}}<button type="button" name="button" class="btn btn-hero">Browse Stories</button>{{/link-to}}
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Features Section -->
+<section id="features" class="container content-section">
+  <div class="row content">
+    <h2>CollaboWrite is an open storytelling platform.</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="/assets/images/idea.png" alt="idea icon" />
+        <p>Start with an idea</p>
+      </div>
+      <div class="feature">
+        <img src="/assets/images/write.png" alt="writing icon" />
+        <p>Contribute to any story</p>
+      </div>
+      <div class="feature">
+        <img src="/assets/images/complete.png" alt="complete icon" />
+        <p>Save and share</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section id="howitworks" class="content-section text-center">
+  <div class="col-lg-8">
+    <h2>How it Works</h2>
+    <p>This is how this works!</p>
+  </div>
+</section>
+
+<!-- Community Guidelines Section -->
+<section id="guidelines" class="content-section">
+  <div class="download-section">
+    <div class="container">
+      <h2>Community Guidelines</h2>
+      <ul>
+        <li>Create as many stories as you would like, but you can only check out one at a time.</li>
+        <li>Check out a story for a maximum of 24 hours. After the alotted time limit, the story will automatically be unlocked and your unsaved work will be lost.</li>
+        <li>You may not check out a story two consecutive times unless there is a 24 hour period between checkouts.</li>
+        <li>A story is locked while in edit mode and remains locked until the story owner approves or rejects pending contributions. The owner does not have a time limit to approve the contribution.</li>
+        <li>If the genre has been specified, try to adhere to it, even loosely. The story owner has the right to reject your contribution for any reason.</li>
+        <li>Don't be an ass. You can be banned.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 {{outlet}}
