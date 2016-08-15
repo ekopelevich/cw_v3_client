@@ -6,7 +6,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  // this.route('index');
   this.route('login');
   this.route('dashboard', function(){
     this.route('profile');
@@ -18,12 +17,12 @@ Router.map(function() {
   this.route('stories', function(){
     this.route('new');
     this.route('edit');
-  });
-  this.route('story', {path: 'stories/:story_id'}, function(){
-    this.route('contributions', function(){
-      this.route('new');
-      this.route('edit');
-    });
+    this.route('story', {path: 'stories/:story_id'}, function(){
+      this.route('contributions', function(){
+        this.route('new');
+        this.route('edit');
+      });
+    });  
   });
 });
 
