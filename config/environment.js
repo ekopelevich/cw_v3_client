@@ -3,7 +3,6 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'collabowrite-client',
-    podModulePrefix: 'demo/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
