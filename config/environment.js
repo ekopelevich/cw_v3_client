@@ -24,6 +24,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_TRANSITIONS = true;
     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiHost = 'localhost:3000' || 'https://aqueous-island-41568.herokuapp.com';
   }
 
   if (environment === 'test') {
