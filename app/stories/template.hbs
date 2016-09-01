@@ -5,7 +5,7 @@
     {{#each model.stories as |story| }}
       <div class="story-container">
         <div class="story-info-container">
-          {{#link-to "story.contributions" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
+          {{#link-to "stories" story}}<h3 class="story-title">{{story.title}}</h3>{{/link-to}}
           <p class="story-summary">{{story.summary}}</p>
           <div class="story-meta-data">
             <p class="story-user">Created by: {{story.user.firstName}} {{story.user.lastName}}</p>
@@ -14,8 +14,8 @@
           </div>
         </div>
         <div class="btn-container">
-          {{#link-to "story.contributions" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
-          {{#link-to "story.contributions.new" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
+          {{#link-to "stories" story tagName="button" class="btn btn-success"}}Read More{{/link-to}}
+          {{#link-to "stories" story tagName="button" class="btn btn-primary"}}Contribute{{/link-to}}
         </div>
       </div>
     {{/each}}

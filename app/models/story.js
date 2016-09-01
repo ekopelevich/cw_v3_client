@@ -1,4 +1,4 @@
-import DS from 'ember-data';
+import DS from 'ember-data'
 
 export default DS.Model.extend({
   title: DS.attr(),
@@ -8,6 +8,6 @@ export default DS.Model.extend({
   genreId: DS.attr(),
   checkoutTime: DS.attr(),
   stateId: DS.attr(),
-  user: DS.belongsTo('user'),
-  contributions: DS.hasMany('contribution', {async: true})
-});
+  // user: DS.belongsTo('user'),
+  // contributions: DS.hasMany('contribution', {async: true}),
+})
