@@ -11,6 +11,9 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       },
+      EXTEND_PROTOTYPES: {
+        Date: false,
+      },
     },
     APP: {
       // Here you can pass flags/options to your application instance
@@ -18,13 +21,14 @@ module.exports = function(environment) {
     },
   }
 
+
   if (environment === 'development') {
     ENV.APP.LOG_RESOLVER = false
     ENV.APP.LOG_ACTIVE_GENERATION = false
     ENV.APP.LOG_TRANSITIONS = false
     ENV.APP.LOG_TRANSITIONS_INTERNAL = false
     ENV.APP.LOG_VIEW_LOOKUPS = false
-    ENV.apiHost = 'localhost:3000' || 'https://cw-api.herokuapp.com'
+    ENV.apiHost = 'https://cw-api.herokuapp.com' //'localhost:3000'
   }
 
   if (environment === 'test') {
