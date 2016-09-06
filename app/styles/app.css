@@ -338,7 +338,7 @@ body {
 	display: flex;
 	max-width: 90vw;
 	width: 800px;
-	background: url(../img/paper.png) repeat;
+	background: url(../assets/images/paper.png) repeat;
 	border: 5px solid #fff;
 	margin-bottom: 30px;
 	padding: 20px;

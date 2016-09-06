@@ -1,4 +1,4 @@
-import DS from 'ember-data';
+import DS from 'ember-data'
 
 export default DS.Model.extend({
   firstName: DS.attr(),
@@ -11,5 +11,5 @@ export default DS.Model.extend({
   avatar: DS.attr(),
   banned: DS.attr(),
   stories: DS.hasMany('story', {async: true}),
-  contributions: DS.hasMany('contribution', {async: true})
-});
+  // contributions: DS.hasMany('contribution', {async: true}),
+})
