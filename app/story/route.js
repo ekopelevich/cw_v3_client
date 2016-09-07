@@ -4,11 +4,11 @@ export default Ember.Route.extend({
   beforeModel(transition){
     console.log('transition', transition)
   },
-  model: function() {
+  model(params) {
     return Ember.RSVP.hash({
       users: this.store.findAll('user'),
-      stories: this.store.findAll('story'),
-      // contributions: this.store.findAll('contribution'),
+      story: this.store.findRecord('story', params.id),
+      // contributions: this.store.findAll('contribution')
     })
   },
 })
